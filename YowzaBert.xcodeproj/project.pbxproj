@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D402693B1DA4E88500CD3BF8 /* Bert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40269351DA4E88500CD3BF8 /* Bert.swift */; };
+		D402693C1DA4E88500CD3BF8 /* BertAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40269361DA4E88500CD3BF8 /* BertAtom.swift */; };
+		D402693D1DA4E88500CD3BF8 /* BertDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40269371DA4E88500CD3BF8 /* BertDecoder.swift */; };
+		D402693E1DA4E88500CD3BF8 /* BertEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40269381DA4E88500CD3BF8 /* BertEncoder.swift */; };
+		D402693F1DA4E88500CD3BF8 /* BertTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40269391DA4E88500CD3BF8 /* BertTuple.swift */; };
+		D40269401DA4E88500CD3BF8 /* DistributionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D402693A1DA4E88500CD3BF8 /* DistributionHeader.swift */; };
+		D452B01D1DA5167900145A95 /* BigDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0081DA5167900145A95 /* BigDigit.swift */; };
+		D452B01E1DA5167900145A95 /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0091DA5167900145A95 /* BigInt.swift */; };
+		D452B01F1DA5167900145A95 /* BigUInt Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00A1DA5167900145A95 /* BigUInt Addition.swift */; };
+		D452B0201DA5167900145A95 /* BigUInt Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00B1DA5167900145A95 /* BigUInt Bitwise Ops.swift */; };
+		D452B0211DA5167900145A95 /* BigUInt Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00C1DA5167900145A95 /* BigUInt Comparison.swift */; };
+		D452B0221DA5167900145A95 /* BigUInt Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00D1DA5167900145A95 /* BigUInt Data.swift */; };
+		D452B0231DA5167900145A95 /* BigUInt Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00E1DA5167900145A95 /* BigUInt Division.swift */; };
+		D452B0241DA5167900145A95 /* BigUInt Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B00F1DA5167900145A95 /* BigUInt Exponentiation.swift */; };
+		D452B0251DA5167900145A95 /* BigUInt GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0101DA5167900145A95 /* BigUInt GCD.swift */; };
+		D452B0261DA5167900145A95 /* BigUInt Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0111DA5167900145A95 /* BigUInt Hashing.swift */; };
+		D452B0271DA5167900145A95 /* BigUInt Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0121DA5167900145A95 /* BigUInt Multiplication.swift */; };
+		D452B0281DA5167900145A95 /* BigUInt Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0131DA5167900145A95 /* BigUInt Prime Test.swift */; };
+		D452B0291DA5167900145A95 /* BigUInt Radix Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0141DA5167900145A95 /* BigUInt Radix Conversion.swift */; };
+		D452B02A1DA5167900145A95 /* BigUInt Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0151DA5167900145A95 /* BigUInt Random.swift */; };
+		D452B02B1DA5167900145A95 /* BigUInt Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0161DA5167900145A95 /* BigUInt Shifts.swift */; };
+		D452B02C1DA5167900145A95 /* BigUInt Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0171DA5167900145A95 /* BigUInt Square Root.swift */; };
+		D452B02D1DA5167900145A95 /* BigUInt Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0181DA5167900145A95 /* BigUInt Subtraction.swift */; };
+		D452B02E1DA5167900145A95 /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B0191DA5167900145A95 /* BigUInt.swift */; };
+		D452B02F1DA5167900145A95 /* Bitwise Hacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B01A1DA5167900145A95 /* Bitwise Hacks.swift */; };
+		D452B0301DA5167900145A95 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D452B01B1DA5167900145A95 /* Info.plist */; };
+		D452B0311DA5167900145A95 /* ShiftOperationsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D452B01C1DA5167900145A95 /* ShiftOperationsType.swift */; };
+		D48F161D1DA387A300093AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F161C1DA387A300093AA1 /* AppDelegate.swift */; };
+		D48F161F1DA387A300093AA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F161E1DA387A300093AA1 /* ViewController.swift */; };
+		D48F16221DA387A300093AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F16201DA387A300093AA1 /* Main.storyboard */; };
+		D48F16241DA387A300093AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F16231DA387A300093AA1 /* Assets.xcassets */; };
+		D48F16271DA387A300093AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F16251DA387A300093AA1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D40269351DA4E88500CD3BF8 /* Bert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bert.swift; path = Bert/Bert.swift; sourceTree = "<group>"; };
+		D40269361DA4E88500CD3BF8 /* BertAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BertAtom.swift; path = Bert/BertAtom.swift; sourceTree = "<group>"; };
+		D40269371DA4E88500CD3BF8 /* BertDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BertDecoder.swift; path = Bert/BertDecoder.swift; sourceTree = "<group>"; };
+		D40269381DA4E88500CD3BF8 /* BertEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BertEncoder.swift; path = Bert/BertEncoder.swift; sourceTree = "<group>"; };
+		D40269391DA4E88500CD3BF8 /* BertTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BertTuple.swift; path = Bert/BertTuple.swift; sourceTree = "<group>"; };
+		D402693A1DA4E88500CD3BF8 /* DistributionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistributionHeader.swift; path = Bert/DistributionHeader.swift; sourceTree = "<group>"; };
+		D452B0081DA5167900145A95 /* BigDigit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigDigit.swift; path = BigInteger/BigDigit.swift; sourceTree = "<group>"; };
+		D452B0091DA5167900145A95 /* BigInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = BigInteger/BigInt.swift; sourceTree = "<group>"; };
+		D452B00A1DA5167900145A95 /* BigUInt Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Addition.swift"; path = "BigInteger/BigUInt Addition.swift"; sourceTree = "<group>"; };
+		D452B00B1DA5167900145A95 /* BigUInt Bitwise Ops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Bitwise Ops.swift"; path = "BigInteger/BigUInt Bitwise Ops.swift"; sourceTree = "<group>"; };
+		D452B00C1DA5167900145A95 /* BigUInt Comparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Comparison.swift"; path = "BigInteger/BigUInt Comparison.swift"; sourceTree = "<group>"; };
+		D452B00D1DA5167900145A95 /* BigUInt Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Data.swift"; path = "BigInteger/BigUInt Data.swift"; sourceTree = "<group>"; };
+		D452B00E1DA5167900145A95 /* BigUInt Division.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Division.swift"; path = "BigInteger/BigUInt Division.swift"; sourceTree = "<group>"; };
+		D452B00F1DA5167900145A95 /* BigUInt Exponentiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Exponentiation.swift"; path = "BigInteger/BigUInt Exponentiation.swift"; sourceTree = "<group>"; };
+		D452B0101DA5167900145A95 /* BigUInt GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt GCD.swift"; path = "BigInteger/BigUInt GCD.swift"; sourceTree = "<group>"; };
+		D452B0111DA5167900145A95 /* BigUInt Hashing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Hashing.swift"; path = "BigInteger/BigUInt Hashing.swift"; sourceTree = "<group>"; };
+		D452B0121DA5167900145A95 /* BigUInt Multiplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Multiplication.swift"; path = "BigInteger/BigUInt Multiplication.swift"; sourceTree = "<group>"; };
+		D452B0131DA5167900145A95 /* BigUInt Prime Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Prime Test.swift"; path = "BigInteger/BigUInt Prime Test.swift"; sourceTree = "<group>"; };
+		D452B0141DA5167900145A95 /* BigUInt Radix Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Radix Conversion.swift"; path = "BigInteger/BigUInt Radix Conversion.swift"; sourceTree = "<group>"; };
+		D452B0151DA5167900145A95 /* BigUInt Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Random.swift"; path = "BigInteger/BigUInt Random.swift"; sourceTree = "<group>"; };
+		D452B0161DA5167900145A95 /* BigUInt Shifts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Shifts.swift"; path = "BigInteger/BigUInt Shifts.swift"; sourceTree = "<group>"; };
+		D452B0171DA5167900145A95 /* BigUInt Square Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Square Root.swift"; path = "BigInteger/BigUInt Square Root.swift"; sourceTree = "<group>"; };
+		D452B0181DA5167900145A95 /* BigUInt Subtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BigUInt Subtraction.swift"; path = "BigInteger/BigUInt Subtraction.swift"; sourceTree = "<group>"; };
+		D452B0191DA5167900145A95 /* BigUInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = BigInteger/BigUInt.swift; sourceTree = "<group>"; };
+		D452B01A1DA5167900145A95 /* Bitwise Hacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bitwise Hacks.swift"; path = "BigInteger/Bitwise Hacks.swift"; sourceTree = "<group>"; };
+		D452B01B1DA5167900145A95 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BigInteger/Info.plist; sourceTree = "<group>"; };
+		D452B01C1DA5167900145A95 /* ShiftOperationsType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShiftOperationsType.swift; path = BigInteger/ShiftOperationsType.swift; sourceTree = "<group>"; };
+		D48F16191DA387A300093AA1 /* YowzaBert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YowzaBert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48F161C1DA387A300093AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D48F161E1DA387A300093AA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D48F16211DA387A300093AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D48F16231DA387A300093AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D48F16261DA387A300093AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D48F16281DA387A300093AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48F16311DA387A300093AA1 /* YowzaBertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YowzaBertTests.swift; sourceTree = "<group>"; };
+		D48F16331DA387A300093AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48F163C1DA387A300093AA1 /* YowzaBertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YowzaBertUITests.swift; sourceTree = "<group>"; };
+		D48F163E1DA387A400093AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D48F16161DA387A300093AA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D40269411DA4E89900CD3BF8 /* Bert */ = {
+			isa = PBXGroup;
+			children = (
+				D40269351DA4E88500CD3BF8 /* Bert.swift */,
+				D40269361DA4E88500CD3BF8 /* BertAtom.swift */,
+				D40269371DA4E88500CD3BF8 /* BertDecoder.swift */,
+				D40269381DA4E88500CD3BF8 /* BertEncoder.swift */,
+				D40269391DA4E88500CD3BF8 /* BertTuple.swift */,
+				D402693A1DA4E88500CD3BF8 /* DistributionHeader.swift */,
+			);
+			name = Bert;
+			sourceTree = "<group>";
+		};
+		D40269421DA4E8AA00CD3BF8 /* BigInteger */ = {
+			isa = PBXGroup;
+			children = (
+				D452B0081DA5167900145A95 /* BigDigit.swift */,
+				D452B0091DA5167900145A95 /* BigInt.swift */,
+				D452B00A1DA5167900145A95 /* BigUInt Addition.swift */,
+				D452B00B1DA5167900145A95 /* BigUInt Bitwise Ops.swift */,
+				D452B00C1DA5167900145A95 /* BigUInt Comparison.swift */,
+				D452B00D1DA5167900145A95 /* BigUInt Data.swift */,
+				D452B00E1DA5167900145A95 /* BigUInt Division.swift */,
+				D452B00F1DA5167900145A95 /* BigUInt Exponentiation.swift */,
+				D452B0101DA5167900145A95 /* BigUInt GCD.swift */,
+				D452B0111DA5167900145A95 /* BigUInt Hashing.swift */,
+				D452B0121DA5167900145A95 /* BigUInt Multiplication.swift */,
+				D452B0131DA5167900145A95 /* BigUInt Prime Test.swift */,
+				D452B0141DA5167900145A95 /* BigUInt Radix Conversion.swift */,
+				D452B0151DA5167900145A95 /* BigUInt Random.swift */,
+				D452B0161DA5167900145A95 /* BigUInt Shifts.swift */,
+				D452B0171DA5167900145A95 /* BigUInt Square Root.swift */,
+				D452B0181DA5167900145A95 /* BigUInt Subtraction.swift */,
+				D452B0191DA5167900145A95 /* BigUInt.swift */,
+				D452B01A1DA5167900145A95 /* Bitwise Hacks.swift */,
+				D452B01B1DA5167900145A95 /* Info.plist */,
+				D452B01C1DA5167900145A95 /* ShiftOperationsType.swift */,
+			);
+			name = BigInteger;
+			sourceTree = "<group>";
+		};
+		D48F16101DA387A300093AA1 = {
+			isa = PBXGroup;
+			children = (
+				D48F161B1DA387A300093AA1 /* YowzaBert */,
+				D48F16301DA387A300093AA1 /* YowzaBertTests */,
+				D48F163B1DA387A300093AA1 /* YowzaBertUITests */,
+				D48F161A1DA387A300093AA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D48F161A1DA387A300093AA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D48F16191DA387A300093AA1 /* YowzaBert.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D48F161B1DA387A300093AA1 /* YowzaBert */ = {
+			isa = PBXGroup;
+			children = (
+				D40269421DA4E8AA00CD3BF8 /* BigInteger */,
+				D40269411DA4E89900CD3BF8 /* Bert */,
+				D48F161C1DA387A300093AA1 /* AppDelegate.swift */,
+				D48F161E1DA387A300093AA1 /* ViewController.swift */,
+				D48F16201DA387A300093AA1 /* Main.storyboard */,
+				D48F16231DA387A300093AA1 /* Assets.xcassets */,
+				D48F16251DA387A300093AA1 /* LaunchScreen.storyboard */,
+				D48F16281DA387A300093AA1 /* Info.plist */,
+			);
+			path = YowzaBert;
+			sourceTree = "<group>";
+		};
+		D48F16301DA387A300093AA1 /* YowzaBertTests */ = {
+			isa = PBXGroup;
+			children = (
+				D48F16311DA387A300093AA1 /* YowzaBertTests.swift */,
+				D48F16331DA387A300093AA1 /* Info.plist */,
+			);
+			path = YowzaBertTests;
+			sourceTree = "<group>";
+		};
+		D48F163B1DA387A300093AA1 /* YowzaBertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D48F163C1DA387A300093AA1 /* YowzaBertUITests.swift */,
+				D48F163E1DA387A400093AA1 /* Info.plist */,
+			);
+			path = YowzaBertUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D48F16181DA387A300093AA1 /* YowzaBert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48F16411DA387A400093AA1 /* Build configuration list for PBXNativeTarget "YowzaBert" */;
+			buildPhases = (
+				D48F16151DA387A300093AA1 /* Sources */,
+				D48F16161DA387A300093AA1 /* Frameworks */,
+				D48F16171DA387A300093AA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YowzaBert;
+			productName = YowzaBert;
+			productReference = D48F16191DA387A300093AA1 /* YowzaBert.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D48F16111DA387A300093AA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Pankaj Soni";
+				TargetAttributes = {
+					D48F16181DA387A300093AA1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = T6WD3TW75W;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = D48F16141DA387A300093AA1 /* Build configuration list for PBXProject "YowzaBert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D48F16101DA387A300093AA1;
+			productRefGroup = D48F161A1DA387A300093AA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D48F16181DA387A300093AA1 /* YowzaBert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D48F16171DA387A300093AA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D452B0301DA5167900145A95 /* Info.plist in Resources */,
+				D48F16271DA387A300093AA1 /* LaunchScreen.storyboard in Resources */,
+				D48F16241DA387A300093AA1 /* Assets.xcassets in Resources */,
+				D48F16221DA387A300093AA1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D48F16151DA387A300093AA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40269401DA4E88500CD3BF8 /* DistributionHeader.swift in Sources */,
+				D48F161F1DA387A300093AA1 /* ViewController.swift in Sources */,
+				D452B0311DA5167900145A95 /* ShiftOperationsType.swift in Sources */,
+				D402693E1DA4E88500CD3BF8 /* BertEncoder.swift in Sources */,
+				D452B0201DA5167900145A95 /* BigUInt Bitwise Ops.swift in Sources */,
+				D402693C1DA4E88500CD3BF8 /* BertAtom.swift in Sources */,
+				D452B01F1DA5167900145A95 /* BigUInt Addition.swift in Sources */,
+				D452B0231DA5167900145A95 /* BigUInt Division.swift in Sources */,
+				D402693B1DA4E88500CD3BF8 /* Bert.swift in Sources */,
+				D452B02B1DA5167900145A95 /* BigUInt Shifts.swift in Sources */,
+				D452B0211DA5167900145A95 /* BigUInt Comparison.swift in Sources */,
+				D452B02A1DA5167900145A95 /* BigUInt Random.swift in Sources */,
+				D452B02D1DA5167900145A95 /* BigUInt Subtraction.swift in Sources */,
+				D452B0251DA5167900145A95 /* BigUInt GCD.swift in Sources */,
+				D452B0241DA5167900145A95 /* BigUInt Exponentiation.swift in Sources */,
+				D452B0261DA5167900145A95 /* BigUInt Hashing.swift in Sources */,
+				D452B0291DA5167900145A95 /* BigUInt Radix Conversion.swift in Sources */,
+				D452B0221DA5167900145A95 /* BigUInt Data.swift in Sources */,
+				D402693D1DA4E88500CD3BF8 /* BertDecoder.swift in Sources */,
+				D452B02C1DA5167900145A95 /* BigUInt Square Root.swift in Sources */,
+				D452B0281DA5167900145A95 /* BigUInt Prime Test.swift in Sources */,
+				D452B01E1DA5167900145A95 /* BigInt.swift in Sources */,
+				D452B0271DA5167900145A95 /* BigUInt Multiplication.swift in Sources */,
+				D452B02F1DA5167900145A95 /* Bitwise Hacks.swift in Sources */,
+				D48F161D1DA387A300093AA1 /* AppDelegate.swift in Sources */,
+				D402693F1DA4E88500CD3BF8 /* BertTuple.swift in Sources */,
+				D452B02E1DA5167900145A95 /* BigUInt.swift in Sources */,
+				D452B01D1DA5167900145A95 /* BigDigit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D48F16201DA387A300093AA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D48F16211DA387A300093AA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D48F16251DA387A300093AA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D48F16261DA387A300093AA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D48F163F1DA387A400093AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D48F16401DA387A400093AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D48F16421DA387A400093AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T6WD3TW75W;
+				INFOPLIST_FILE = YowzaBert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softwarejoint.YowzaBert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D48F16431DA387A400093AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T6WD3TW75W;
+				INFOPLIST_FILE = YowzaBert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softwarejoint.YowzaBert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D48F16141DA387A300093AA1 /* Build configuration list for PBXProject "YowzaBert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48F163F1DA387A400093AA1 /* Debug */,
+				D48F16401DA387A400093AA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48F16411DA387A400093AA1 /* Build configuration list for PBXNativeTarget "YowzaBert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48F16421DA387A400093AA1 /* Debug */,
+				D48F16431DA387A400093AA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D48F16111DA387A300093AA1 /* Project object */;
+}
