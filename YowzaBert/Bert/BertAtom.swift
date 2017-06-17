@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BertAtom: NSObject, NSCopying {
+class BertAtom: NSObject {
     
     private let ATOM_EXT_MAX_LEN : Int = 255
     private var atom : String? = nil
@@ -23,10 +23,6 @@ class BertAtom: NSObject, NSCopying {
         else {
             self.atom = atom
         }
-    }
-    
-    func copyWithZone(zone: NSZone) -> AnyObject {
-        return BertAtom(atom: self.atom!)
     }
     
     func stringVal() -> String {

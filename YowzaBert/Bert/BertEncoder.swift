@@ -45,18 +45,18 @@ class BertEncoder: Bert {
     
     func encodeAny(any: Any!) -> NSData{
         data = NSMutableData()
-        data.appendBytes(&MAGIC, length: 1)
-        encode(any)
+        data.append(&MAGIC, length: 1)
+        encode(any: any)
         
         // create array of appropriate length:
-        var array = [UInt8](count: data.length, repeatedValue: 0)
+        var array = [UInt8](repeating: 0, count: data.length)
         
         // copy bytes into array
         data.getBytes(&array, length:data.length)
         
-        for x in 0...array.count-1 {
-            print(array[x])
-        }
+//        for x in 0...array.count-1 {
+//            print(array[x])
+//        }
         return data;
     }
     
@@ -65,160 +65,159 @@ class BertEncoder: Bert {
         case nil:
             encodeNull();
         case let num as NSNumber:
-            if isFraction(num) {
-                encodeDouble(num.doubleValue)
+            if isFraction(num: num) {
+                encodeDouble(someDouble: num.doubleValue)
             } else {
-                encodeInteger(Int(num.longLongValue))
+                encodeInteger(someInt: Int(num.int64Value))
             }
         case let someInt as Int:
-            encodeInteger(someInt)
+            encodeInteger(someInt: someInt)
         case let someLong as Int64:
-            encodeBigInteger(BigInt(someLong))
+            encodeBigInteger(bigInt: BigInt(someLong))
         case let someFloat as Float:
             let someDouble = Double(someFloat)
-            encodeDouble(someDouble)
+            encodeDouble(someDouble: someDouble)
         case let someDouble as Double:
-            encodeDouble(someDouble)
+            encodeDouble(someDouble: someDouble)
         case let bigInt as BigInt:
-            encodeBigInteger(bigInt)
+            encodeBigInteger(bigInt: bigInt)
         case let bool as Bool:
             if (bool){
-                encodeAtom("true")
+                encodeAtom(atom: "true")
             } else{
-                encodeAtom("false")
+                encodeAtom(atom: "false")
             }
         case let atom as BertAtom:
-            encodeAtom(atom.stringVal())
+            encodeAtom(atom: atom.stringVal())
         case let string as String:
-            encodeString(string)
+            encodeString(string: string)
         case let binary as NSData:
-            encodeBinary(binary)
+            encodeBinary(binary: binary)
         case let tuple as BertTuple:
-            encodeTuple(tuple)
-        case let array as NSArray:
-            encodeArray(array.flatMap({$0}))
-        case let array as Array<Any>:
-            encodeArray(array)
+            encodeTuple(tuple: tuple)
+        case let array as Array<AnyObject>:
+            let elems = array.map {$0 as Any}
+            encodeArray(array: elems)
         case let dict as NSDictionary:
-            encodeDict(dict)
+            encodeDict(dict: dict)
         default:
             print("Un encodable data received \(any)")
         }
     }
     
     private func encodeNull(){
-        data.appendBytes(&NIL_EXT, length: 1)
+        data.append(&NIL_EXT, length: 1)
     }
     
     private func encodeByte(someByte: Int) {
-        data.appendBytes(&SMALL_INTEGER_EXT, length: 1)
-        putUnsignedByte(someByte);
+        data.append(&SMALL_INTEGER_EXT, length: 1)
+        putUnsignedByte(someByte: someByte);
     }
     
     private func encodeInteger(someInt: Int){
         if (SMALL_INTEGER_EXT_MIN_VAL <= someInt && someInt <= SMALL_INTEGER_EXT_MAX_VAL) {
-            encodeByte(someInt)
+            encodeByte(someByte: someInt)
         } else if (INTEGER_EXT_MIN_VAL <= someInt && someInt <= INTEGER_EXT_MAX_VAL) {
-            data.appendBytes(&INTEGER_EXT, length: 1)
+            data.append(&INTEGER_EXT, length: 1)
             var value: Int32 = Int32(someInt).bigEndian;
-            data.appendBytes(&value, length: sizeof(Int32));
+            data.append(&value, length: MemoryLayout<Int32>.size);
         } else {
-            encodeBigInteger(BigInt(someInt))
+            encodeBigInteger(bigInt: BigInt(someInt))
         }
     }
     
     private func encodeDouble(someDouble: Double){
-        var array = toByteArray(someDouble)
-        data.appendBytes(&NEW_FLOAT_EXT, length: 1)
-        data.appendBytes(&array, length: sizeof(Double))
+        var array = toByteArray(value: someDouble)
+        data.append(&NEW_FLOAT_EXT, length: 1)
+        data.append(&array, length: MemoryLayout<Double>.size)
     }
     
     private func encodeBigInteger(bigInt: BigInt){
         
-        let bytes: NSData = bigInt.abs.serialize()
+        let bytes: NSData = bigInt.abs.serialize() as NSData
         let count = bytes.length
         
         if (count <= SMALL_INTEGER_EXT_MAX_VAL){
-            data.appendBytes(&SMALL_BIG_EXT, length: 1)
-            putUnsignedByte(count);
+            data.append(&SMALL_BIG_EXT, length: 1)
+            putUnsignedByte(someByte: count);
         } else {
-            data.appendBytes(&LARGE_BIG_EXT, length: 1)
-            putUnsignedInt(count);
+            data.append(&LARGE_BIG_EXT, length: 1)
+            putUnsignedInt(someInt: count);
         }
         
         var sign: UInt8 = bigInt.negative ? 1 : 0
         
-        data.appendBytes(&sign, length: 1)
-        data.appendData(bytes)
+        data.append(&sign, length: 1)
+        data.append(bytes as Data)
     }
     
     private func encodeAtom(atom: String) {
         let count = atom.characters.count;
         
         if (count <= SMALL_INTEGER_EXT_MAX_VAL){
-            data.appendBytes(&SMALL_ATOM_EXT, length: 1)
-            putUnsignedByte(count)
+            data.append(&SMALL_ATOM_EXT, length: 1)
+            putUnsignedByte(someByte: count)
         } else{
-            data.appendBytes(&ATOM_EXT, length: 1)
-            putUnsignedShort(count);
+            data.append(&ATOM_EXT, length: 1)
+            putUnsignedShort(someShort: count);
         }
         
-        data.appendData(atom.dataUsingEncoding(NSUTF8StringEncoding)!)
+        data.append(atom.data(using: String.Encoding.utf8)!)
     }
     
     private func encodeString(string: String){
         if (encodeStringAsBinary){
-            encodeBinary(string.dataUsingEncoding(NSUTF8StringEncoding)!);
+            encodeBinary(binary: string.data(using: String.Encoding.utf8)! as NSData)
             return;
         }
         
         let count = string.characters.count;
         
         if (count <= STRING_EXT_MAX_VAL){
-            data.appendBytes(&STRING_EXT, length: 1)
-            putUnsignedShort(count);
-            data.appendData(string.dataUsingEncoding(NSUTF8StringEncoding)!)
+            data.append(&STRING_EXT, length: 1)
+            putUnsignedShort(someShort: count);
+            data.append(string.data(using: String.Encoding.utf8)!)
         } else {
-            encodeArray(Array(arrayLiteral: string.characters))
+            encodeArray(array: Array(arrayLiteral: string.characters))
         }
     }
     
     private func encodeBinary(binary: NSData) {
-        data.appendBytes(&BINARY_EXT, length: 1)
-        putUnsignedInt(binary.length);
-        data.appendData(binary)
+        data.append(&BINARY_EXT, length: 1)
+        putUnsignedInt(someInt: binary.length);
+        data.append(binary as Data)
     }
     
     private func encodeTuple(tuple: BertTuple) {
         if tuple.isKV() {
             let dict = NSMutableDictionary()
-            dict.setObject(tuple.objectAtIndex(0), forKey: tuple.objectAtIndex(1) as! NSCopying)
-            encode(dict)
+            dict.setObject(tuple.object(at: 0), forKey: tuple.object(at: 1) as! NSCopying)
+            encode(any: dict)
             return
         }
         
-        let count = tuple.count()
+        let count = tuple.count
         
         if (count <= SMALL_INTEGER_EXT_MAX_VAL){
-            data.appendBytes(&SMALL_TUPLE_EXT, length: 1)
-            putUnsignedByte(count);
+            data.append(&SMALL_TUPLE_EXT, length: 1)
+            putUnsignedByte(someByte: count);
         } else{
-            data.appendBytes(&LARGE_TUPLE_EXT, length: 1)
-            putUnsignedInt(count);
+            data.append(&LARGE_TUPLE_EXT, length: 1)
+            putUnsignedInt(someInt: count);
         }
         
-        for o : Any in tuple.array {
-            encode(o)
+        for o: Any in tuple {
+            encode(any: o)
         }
     }
     
     private func encodeArray(array: Array<Any>){
-        data.appendBytes(&LIST_EXT, length: 1)
+        data.append(&LIST_EXT, length: 1)
         
-        putUnsignedInt(array.count);
+        putUnsignedInt(someInt: array.count);
         
         for o: Any in array {
-            encode(o)
+            encode(any: o)
         }
         
         encodeNull();
@@ -226,30 +225,28 @@ class BertEncoder: Bert {
     
     private func encodeDict(dict: NSDictionary){
         if (encodeMapAsPropList){
-            data.appendBytes(&LIST_EXT, length: 1)
+            data.append(&LIST_EXT, length: 1)
         } else{
-            data.appendBytes(&MAP_EXT, length: 1)
+            data.append(&MAP_EXT, length: 1)
         }
         
-        putUnsignedInt(dict.count);
-        
-        NSLog("count of elements \(dict.count)")
+        putUnsignedInt(someInt: dict.count);
         
         for (key, value) in dict {
             if (encodeMapAsPropList){
-                data.appendBytes(&SMALL_TUPLE_EXT, length: 1)
-                putUnsignedByte(2);
+                data.append(&SMALL_TUPLE_EXT, length: 1)
+                putUnsignedByte(someByte: 2);
             }
             
             if (encodeMapKeysAsAtom) {
-                encodeAtom(String(key));
+                encodeAtom(atom: String(describing: key));
             } else if (encodeMapKeysAsString) {
-                encodeString(String(key));
+                encodeString(string: String(describing: key));
             } else {
-                encode(key);
+                encode(any: key);
             }
             
-            encode(value);
+            encode(any: value);
         }
         
         if (encodeMapAsPropList){
@@ -259,23 +256,23 @@ class BertEncoder: Bert {
     
     private func putUnsignedByte(someByte: Int) {
         var byte: UInt8 = UInt8(someByte);
-        data.appendBytes(&byte, length: 1)
+        data.append(&byte, length: 1)
     }
     
     private func putUnsignedShort(someShort: Int) {
         var short: UInt16 = UInt16(someShort).bigEndian
-        data.appendBytes(&short, length: sizeof(UInt16))
+        data.append(&short, length: MemoryLayout<UInt16>.size)
     }
     
     private func putUnsignedInt(someInt: Int) {
         var int: UInt32 = UInt32(someInt).bigEndian
-        data.appendBytes(&int, length: sizeof(UInt32))
+        data.append(&int, length: MemoryLayout<UInt32>.size)
     }
     
     func toByteArray<T>(value: T) -> [UInt8] {
         var v: T = value
-        return withUnsafePointer(&v) {
-            Array(UnsafeBufferPointer(start: UnsafePointer<UInt8>($0), count: sizeof(T)).reverse())
+        return withUnsafePointer(to: &v) {
+            Array(UnsafeBufferPointer(start: UnsafeRawPointer($0).assumingMemoryBound(to: UInt8.self), count: MemoryLayout<T>.size).reversed())
         }
     }
 }

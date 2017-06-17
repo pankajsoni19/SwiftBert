@@ -37,7 +37,7 @@ class BertDecoder: Bert {
         if (keys == nil){
             keys = NSMutableArray()
         }
-        keys.addObject(key)
+        keys.add(key)
         return self
     }
     
@@ -45,23 +45,24 @@ class BertDecoder: Bert {
         if (keys == nil) {
             return false
         }
-        return (keys.indexOfObject(key) != NSNotFound)
+        return (keys.index(of: key) != NSNotFound)
     }
     
-    func decodeBinaryToString(data: NSData) -> String! {
-        return String(data: data, encoding: NSUTF8StringEncoding)
-    }
-    
-    func decodeAny(data: NSData) -> Any! {
-        if data.length == 0 {
+    func decodeAny(data: Data) -> Any! {
+        if data.count == 0 {
             return nil
         }
         
-        ptr = UnsafePointer<UInt8>(data.bytes);
+  //      ptr =  UnsafePointer<UInt8>(data.bytes);
+        
+        data.withUnsafeBytes { (u8Ptr: UnsafePointer<UInt8>) in
+            ptr = u8Ptr
+        }
+        
         position = 0
         
-        if (ptr.memory == MAGIC){
-            advancePtrBy(1)
+        if (ptr.pointee == MAGIC){
+            advancePtrBy(n: 1)
             return decode()
         }
 
@@ -70,7 +71,7 @@ class BertDecoder: Bert {
     
     private func decode() -> Any! {
         let type: UInt8 = ptr[0];
-        advancePtrBy(1)
+        advancePtrBy(n: 1)
         
         switch type {
         case NIL_EXT:
@@ -82,13 +83,13 @@ class BertDecoder: Bert {
         case NEW_FLOAT_EXT:
             return decodeDouble()
         case SMALL_BIG_EXT:
-            return decodeLongOrBigInteger(SMALL_BIG_EXT)
+            return decodeLongOrBigInteger(tag: SMALL_BIG_EXT)
         case LARGE_BIG_EXT:
-            return decodeLongOrBigInteger(LARGE_BIG_EXT)
+            return decodeLongOrBigInteger(tag: LARGE_BIG_EXT)
         case ATOM_EXT:
-            return decodeAtom(ATOM_EXT)
+            return decodeAtom(tag: ATOM_EXT)
         case SMALL_ATOM_EXT:
-            return decodeAtom(SMALL_ATOM_EXT)
+            return decodeAtom(tag: SMALL_ATOM_EXT)
         case STRING_EXT:
             return decodeString();
         case BINARY_EXT:
@@ -96,9 +97,9 @@ class BertDecoder: Bert {
         case LIST_EXT:
             return decodeArray();
         case SMALL_TUPLE_EXT:
-            return decodeTuple(SMALL_TUPLE_EXT);
+            return decodeTuple(tag: SMALL_TUPLE_EXT);
         case LARGE_TUPLE_EXT:
-            return decodeTuple(LARGE_TUPLE_EXT);
+            return decodeTuple(tag: LARGE_TUPLE_EXT);
         case MAP_EXT:
             return decodeMap();
         default:
@@ -108,28 +109,46 @@ class BertDecoder: Bert {
     }
     
     private func decodeByte() -> NSNumber! {
-        let num = NSNumber(unsignedChar: ptr[0])
-        advancePtrBy(sizeof(UInt8))
+        let num = NSNumber(value: ptr[0])
+        advancePtrBy(n: MemoryLayout<UInt8>.size)
         return num
     }
     
     private func decodeShort() -> NSNumber! {
-        let i = Int16(bigEndian: UnsafePointer<Int16>(ptr).memory)
-        advancePtrBy(sizeof(Int16))
-        return NSNumber(short: i)
+        
+        let result = ptr.withMemoryRebound(to: Int16.self, capacity: 1) { ptr -> NSNumber in
+            let i = Int16(bigEndian: ptr.pointee)
+            return NSNumber(value: i)
+        }
+        
+        advancePtrBy(n: MemoryLayout<Int16>.size)
+        
+        return result
     }
     
     private func decodeInteger() -> NSNumber! {
-        let i = Int32(bigEndian: UnsafePointer<Int32>(ptr).memory)
-        advancePtrBy(sizeof(Int32))
-        return NSNumber(int: i)
+        
+        let result = ptr.withMemoryRebound(to: Int32.self, capacity: 1) { ptr -> NSNumber in
+            let i = Int32(bigEndian: ptr.pointee)
+            return NSNumber(value: i)
+        }
+        
+        advancePtrBy(n: MemoryLayout<Int32>.size)
+        
+        return result
     }
     
-    func decodeDouble() -> Any! {
-        let array = Array(UnsafeBufferPointer(start: ptr, count: sizeof(Double)).reverse())
-        advancePtrBy(sizeof(Double))
-        return fromByteArray(array, Double.self)
+    func decodeDouble() -> Double! {
+        let array = Array(UnsafeBufferPointer(start: ptr, count: MemoryLayout<Double>.size).reversed())
+        advancePtrBy(n: MemoryLayout<Double>.size)
+        return array.withUnsafeBufferPointer { (ptr) -> Double! in
+            let baseAddr = ptr.baseAddress!
+            return baseAddr.withMemoryRebound(to: Double.self, capacity: 1, { (ptr) -> Double in
+                return ptr.pointee
+            })
+        }
     }
+
     
     func decodeLongOrBigInteger(tag: UInt8) -> Any! {
         var byteCount: NSNumber!
@@ -144,10 +163,11 @@ class BertDecoder: Bert {
         }
         
         let isNegative: Bool = decodeByte() == 1
-        var array = Array(UnsafeBufferPointer<UInt8>(start: ptr, count: byteCount.integerValue).reverse())
-        let bytes = NSData(bytes: &array, length: byteCount.integerValue)
-        advancePtrBy(byteCount.integerValue)
-        return BigInt(abs: BigUInt(bytes), negative: isNegative)
+        let array = Array(UnsafeBufferPointer<UInt8>(start: ptr, count: byteCount.intValue).reversed())
+        let bytes = Data(bytes: UnsafeRawPointer(array), count: byteCount.intValue)
+        advancePtrBy(n: byteCount.intValue)
+        let bigInt = BigInt(abs: BigUInt(bytes), negative: isNegative)
+        return NSNumber(value: (bigInt.description as NSString).longLongValue)
     }
     
     func decodeAtom(tag: UInt8) -> Any! {
@@ -164,8 +184,8 @@ class BertDecoder: Bert {
         
         var atom: String!
         
-        if byteCount.integerValue > 0 {
-            atom = decodeString(byteCount)
+        if byteCount.intValue > 0 {
+            atom = decodeString(byteCount: byteCount)
         }
         
         if (atom == nil || atom.isEmpty) {
@@ -187,41 +207,41 @@ class BertDecoder: Bert {
     }
     
     private func decodeString() -> String! {
-        let byteCount = decodeShort()
-        return decodeString(byteCount)
+        let byteCount: NSNumber = decodeShort()
+        return decodeString(byteCount: byteCount)
     }
     
-    private func decodeBinary() -> Any! {
+    private func decodeBinary() -> Data! {
         let byteCount = decodeInteger()
-        return decodeData(byteCount)
+        return decodeData(byteCount: byteCount!)
     }
     
     private func decodeArray() -> Any! {
-        let numElements = decodeInteger().integerValue
+        let numElements = decodeInteger().intValue
         
         var canDecodeAsMap: Bool = decodePropListsAsMap
         
         let array: AnyObject = NSMutableArray()
         
-        for _ in 0.stride(to: numElements, by: 1) {
+        for _ in 0..<numElements {
             let decoded = decode()
             canDecodeAsMap =
                 canDecodeAsMap &&
                 (decoded is BertTuple) &&
                 (decoded as! BertTuple).isKV()
             
-            array.addObject(decoded as! AnyObject)
+            array.add(decoded as AnyObject)
         }
         
-        if decodeByte().unsignedCharValue != NIL_EXT {
-            ptr.predecessor()
+        if decodeByte().uint8Value != NIL_EXT {
+            _ = ptr.predecessor()
         }
         
         if (canDecodeAsMap){
             let dict = NSMutableDictionary()
             
             for tuple in array as! [BertTuple] {
-                dict.setObject(tuple.objectAtIndex(1), forKey: tuple.objectAtIndex(1) as! NSCopying)
+                dict.setObject(tuple.object(at: 1), forKey: tuple.object(at: 1) as! NSCopying)
             }
         
             return dict
@@ -231,40 +251,48 @@ class BertDecoder: Bert {
     }
     
     private func decodeTuple(tag: UInt8) -> Any! {
-        var numElements: NSNumber!
+        var elements: NSNumber!
         
         switch tag {
         case SMALL_TUPLE_EXT:
-            numElements = decodeByte()
+            elements = decodeByte()
         case LARGE_TUPLE_EXT:
-            numElements = decodeInteger()
+            elements = decodeInteger()
         default:
             return nil
         }
         
         let tuple = BertTuple()
         
-        for _ in 0.stride(to: numElements.integerValue, by: 1) {
-            tuple.addObject(decode() as! AnyObject)
+        for _ in stride(from: 0, to: elements.intValue, by: 1) {
+            tuple.add(decode() as AnyObject)
         }
 
         return tuple
     }
     
     private func decodeMap() -> NSDictionary! {
-        let numElements = decodeInteger().integerValue
+        let numElements = decodeInteger().intValue
         
         let dict = NSMutableDictionary()
         
-        for _ in 0.stride(to: numElements, by: 1) {
+        for _ in stride(from: 0, to: numElements, by: 1) {
             let key = decodeMapKey()
-            let value = decodeMapValue(key)
+            let value = decodeMapValue(key: key)
             
             if (key == nil) {
                 continue
             }
             
-            dict.setObject(value as! AnyObject, forKey: key as! NSCopying)
+            if let val = value {
+                dict.setObject(val, forKey: key as! NSCopying)
+            } else if let val = value as? String{
+                dict.setObject(val, forKey: key as! NSCopying)
+            } else if let val = value as? Array<AnyObject>{
+                dict.setObject(val, forKey: key as! NSCopying)
+            } else {
+                print("unparsed value = \(String(describing: value)) for key = \(String(describing: key))")
+            }
         }
     
         return dict
@@ -285,11 +313,11 @@ class BertDecoder: Bert {
             return (key as! BertAtom).stringVal
         }
         
-        if key is NSData {
-            return String(data: key as! NSData, encoding: NSUTF8StringEncoding)
+        if key is Data {
+            return String(data: key as! Data, encoding: String.Encoding.utf8)
         }
         
-        return String(key)
+        return String(describing: key)
     }
     
     private func decodeMapValue(key: Any!) -> Any! {
@@ -299,32 +327,32 @@ class BertDecoder: Bert {
         
         let value = decode()
         
-        if shouldDecodeBinaryAsStringForKey(key as! NSObject) {
-            return String(data: value as! NSData, encoding: NSUTF8StringEncoding)
+        if shouldDecodeBinaryAsStringForKey(key: key as! NSObject) {
+            switch value {
+            case nil: return nil
+            case let array as Array<NSData>:
+                return array.map { String(data: $0 as Data, encoding: String.Encoding.utf8)!}
+            default:
+                return String(data: (value as! NSData) as Data, encoding: String.Encoding.utf8)
+            }
         }
         
         return value
     }
     
     private func decodeString(byteCount: NSNumber) -> String! {
-        let data = decodeData(byteCount)
-        return String(data: data, encoding: NSUTF8StringEncoding)
+        let data: Data = decodeData(byteCount: byteCount)
+        return String(data: data, encoding: String.Encoding.utf8)
     }
     
-    private func decodeData(byteCount: NSNumber) -> NSData! {
-        let data = NSData(bytes: ptr, length: byteCount.integerValue)
-        advancePtrBy(byteCount.integerValue)
+    private func decodeData(byteCount: NSNumber) -> Data! {
+        let data = Data(bytes: ptr, count: byteCount.intValue)
+        advancePtrBy(n: byteCount.intValue)
         return data
     }
     
     private func advancePtrBy(n: Int){
-        ptr = ptr.advancedBy(n)
+        ptr = ptr.advanced(by: n)
         position += n
-    }
-    
-    func fromByteArray<T>(value: [UInt8], _: T.Type) -> T {
-        return value.withUnsafeBufferPointer {
-            return UnsafePointer<T>($0.baseAddress).memory
-        }
     }
 }
