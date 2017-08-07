@@ -28,7 +28,7 @@ pod "BertSwift"
 
 ## Author
 
-pankajsoni@softwarejoint.com, pankajsoni@softwarejoint.com
+Pankaj Soni <pankajsoni@softwarejoint.com>
 
 ## License
 
