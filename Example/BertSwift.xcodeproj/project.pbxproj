@@ -9,18 +9,32 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BCED27F59A3B408A354C320E /* Pods_BertSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BF9F2CB93F91C3D231DCF6 /* Pods_BertSwift_Tests.framework */; };
+		D4118F701F38FE4200066558 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = D4118F681F38FE4200066558 /* swift.png */; };
+		D4118F711F38FE4200066558 /* Bert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6A1F38FE4200066558 /* Bert.swift */; };
+		D4118F721F38FE4200066558 /* BertAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6B1F38FE4200066558 /* BertAtom.swift */; };
+		D4118F731F38FE4200066558 /* BertDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6C1F38FE4200066558 /* BertDecoder.swift */; };
+		D4118F741F38FE4200066558 /* BertEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6D1F38FE4200066558 /* BertEncoder.swift */; };
+		D4118F751F38FE4200066558 /* BertTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6E1F38FE4200066558 /* BertTuple.swift */; };
+		D4118F761F38FE4200066558 /* DistributionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6F1F38FE4200066558 /* DistributionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B726ED91A1CDE17A07A9A39 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1B726ED91A1CDE17A07A9A39 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		40BF9F2CB93F91C3D231DCF6 /* Pods_BertSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BertSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1AFCF47C97442EC458FA59 /* Pods-BertSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5F72966907213C88A5070746 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5F72966907213C88A5070746 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* BertSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BertSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		819001E0F69A1E1B2B357736 /* BertSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BertSwift.podspec; path = ../BertSwift.podspec; sourceTree = "<group>"; };
+		819001E0F69A1E1B2B357736 /* BertSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BertSwift.podspec; path = ../BertSwift.podspec; sourceTree = "<group>"; };
 		B8F88DBCB8A68BE73F23C403 /* Pods-BertSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4118F681F38FE4200066558 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
+		D4118F6A1F38FE4200066558 /* Bert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bert.swift; sourceTree = "<group>"; };
+		D4118F6B1F38FE4200066558 /* BertAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertAtom.swift; sourceTree = "<group>"; };
+		D4118F6C1F38FE4200066558 /* BertDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertDecoder.swift; sourceTree = "<group>"; };
+		D4118F6D1F38FE4200066558 /* BertEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertEncoder.swift; sourceTree = "<group>"; };
+		D4118F6E1F38FE4200066558 /* BertTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertTuple.swift; sourceTree = "<group>"; };
+		D4118F6F1F38FE4200066558 /* DistributionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,8 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				D4118F671F38FE4200066558 /* Res */,
+				D4118F691F38FE4200066558 /* Source */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -90,6 +106,29 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		D4118F671F38FE4200066558 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				D4118F681F38FE4200066558 /* swift.png */,
+			);
+			name = Res;
+			path = ../Res;
+			sourceTree = "<group>";
+		};
+		D4118F691F38FE4200066558 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D4118F6A1F38FE4200066558 /* Bert.swift */,
+				D4118F6B1F38FE4200066558 /* BertAtom.swift */,
+				D4118F6C1F38FE4200066558 /* BertDecoder.swift */,
+				D4118F6D1F38FE4200066558 /* BertEncoder.swift */,
+				D4118F6E1F38FE4200066558 /* BertTuple.swift */,
+				D4118F6F1F38FE4200066558 /* DistributionHeader.swift */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
 		FFE80981ACB48DC8C0E16AA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +170,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = T6WD3TW75W;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -165,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4118F701F38FE4200066558 /* swift.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4118F711F38FE4200066558 /* Bert.swift in Sources */,
+				D4118F741F38FE4200066558 /* BertEncoder.swift in Sources */,
+				D4118F721F38FE4200066558 /* BertAtom.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				D4118F731F38FE4200066558 /* BertDecoder.swift in Sources */,
+				D4118F761F38FE4200066558 /* DistributionHeader.swift in Sources */,
+				D4118F751F38FE4200066558 /* BertTuple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8F88DBCB8A68BE73F23C403 /* Pods-BertSwift_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6WD3TW75W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D1AFCF47C97442EC458FA59 /* Pods-BertSwift_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = T6WD3TW75W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
