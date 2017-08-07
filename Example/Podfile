@@ -1,0 +1,6 @@
+use_frameworks!
+target 'BertSwift_Tests' do
+  pod 'BertSwift', :path => '../'
+  
+  
+end
