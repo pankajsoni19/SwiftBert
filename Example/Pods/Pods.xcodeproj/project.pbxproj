@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48406D324ECB71B4AB03C47A5A9DD209 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE6919A4340858D05FBA6A6C532149 /* ReplaceMe.swift */; };
+		522E2A4E723310BAC10E14825D3CD43F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		981A3E491ABD2AE4A53AC018901DF2FB /* Pods-BertSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E43CB596CF68FD1958B4F4547FCAB16 /* Pods-BertSwift_Tests-dummy.m */; };
+		B18FB4FB89A4D9EBCDE506C70E1D54EB /* BertSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FED60BFC44146983214ADF4B0B0A2B /* BertSwift-dummy.m */; };
+		D29FE5EEFE4E4FA1D69ED023499622BB /* Pods-BertSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 129E16D3C75FA86BC4C7956D344AC5A2 /* Pods-BertSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2C5305B1BF77413AA297DF05B2B6AE5 /* BertSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B838FBC49735E5A4DC2870C9BF7A26E8 /* BertSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7FAE2D61C642CC67458F3850639671D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D8A13BABEC67653042046C2EBCB2EE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB8374588D2B441590D87FA1E2D1BE0D;
+			remoteInfo = BertSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C8D533D96558AAFEE500DE041682216 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		129E16D3C75FA86BC4C7956D344AC5A2 /* Pods-BertSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BertSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		19EDAF2F6D8F1AD44126674E18ADF388 /* Pods-BertSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BertSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3729C3B9201A2CB184FEB7ACF7E757FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45F6F8D2651D4881AEFE7A66401820D4 /* Pods-BertSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BertSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		47EF703B126262DBF02427439E6AEB0D /* BertSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BertSwift-prefix.pch"; sourceTree = "<group>"; };
+		6168FEB1C2A08693E8DE57894F4B5010 /* BertSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BertSwift.modulemap; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E43CB596CF68FD1958B4F4547FCAB16 /* Pods-BertSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BertSwift_Tests-dummy.m"; sourceTree = "<group>"; };
+		8AA156156A7CEBA07EC2EA823705976B /* Pods-BertSwift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BertSwift_Tests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A54C0951F3B1AD0BC4946F999315A694 /* BertSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BertSwift.xcconfig; sourceTree = "<group>"; };
+		B11E7473B8D442617AEFCAF5F69D4FD9 /* Pods-BertSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BertSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B838FBC49735E5A4DC2870C9BF7A26E8 /* BertSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BertSwift-umbrella.h"; sourceTree = "<group>"; };
+		C1730CA88A82087A922EC759CD806F23 /* Pods-BertSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BertSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD2BA39BB0333929085C386DBFD0F97D /* Pods-BertSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BertSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		DD4FFA069C77BEDE24E58AB0BE799539 /* BertSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BertSwift.framework; path = BertSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E48A82DFDDFB4E87439301FD0435C0FF /* Pods_BertSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BertSwift_Tests.framework; path = "Pods-BertSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DB5072F136DF127797E9F6208A4E88 /* Pods-BertSwift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BertSwift_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		F2EE6919A4340858D05FBA6A6C532149 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		F4FED60BFC44146983214ADF4B0B0A2B /* BertSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BertSwift-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDF60BB7A17676DE15E3E202B64CA083 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522E2A4E723310BAC10E14825D3CD43F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB69AC31AC836D141F31137D1BF5230B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7FAE2D61C642CC67458F3850639671D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1230ED90A4F71E4D568E0563220FE458 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AC34D84CBE7F41512EFF31299A32FC3 /* Pods-BertSwift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		134DE429ECA698685FB46DFCEBB78834 /* BertSwift */ = {
+			isa = PBXGroup;
+			children = (
+				994FACC57F1BCE964A6B18DFD5BFCE78 /* Classes */,
+			);
+			name = BertSwift;
+			path = BertSwift;
+			sourceTree = "<group>";
+		};
+		6C57CFFC16EBCDE3E10A5BEE6B51C448 /* BertSwift */ = {
+			isa = PBXGroup;
+			children = (
+				134DE429ECA698685FB46DFCEBB78834 /* BertSwift */,
+				815081EE630022A737F64C99386D4952 /* Support Files */,
+			);
+			name = BertSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7AC34D84CBE7F41512EFF31299A32FC3 /* Pods-BertSwift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3729C3B9201A2CB184FEB7ACF7E757FE /* Info.plist */,
+				DD2BA39BB0333929085C386DBFD0F97D /* Pods-BertSwift_Tests.modulemap */,
+				C1730CA88A82087A922EC759CD806F23 /* Pods-BertSwift_Tests-acknowledgements.markdown */,
+				45F6F8D2651D4881AEFE7A66401820D4 /* Pods-BertSwift_Tests-acknowledgements.plist */,
+				7E43CB596CF68FD1958B4F4547FCAB16 /* Pods-BertSwift_Tests-dummy.m */,
+				E7DB5072F136DF127797E9F6208A4E88 /* Pods-BertSwift_Tests-frameworks.sh */,
+				8AA156156A7CEBA07EC2EA823705976B /* Pods-BertSwift_Tests-resources.sh */,
+				129E16D3C75FA86BC4C7956D344AC5A2 /* Pods-BertSwift_Tests-umbrella.h */,
+				B11E7473B8D442617AEFCAF5F69D4FD9 /* Pods-BertSwift_Tests.debug.xcconfig */,
+				19EDAF2F6D8F1AD44126674E18ADF388 /* Pods-BertSwift_Tests.release.xcconfig */,
+			);
+			name = "Pods-BertSwift_Tests";
+			path = "Target Support Files/Pods-BertSwift_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A2F81F2CA61F2572008E9B95E6739F74 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F4AF35B6A8E598D0934EBFFB9391563E /* Products */,
+				1230ED90A4F71E4D568E0563220FE458 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		815081EE630022A737F64C99386D4952 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6168FEB1C2A08693E8DE57894F4B5010 /* BertSwift.modulemap */,
+				A54C0951F3B1AD0BC4946F999315A694 /* BertSwift.xcconfig */,
+				F4FED60BFC44146983214ADF4B0B0A2B /* BertSwift-dummy.m */,
+				47EF703B126262DBF02427439E6AEB0D /* BertSwift-prefix.pch */,
+				B838FBC49735E5A4DC2870C9BF7A26E8 /* BertSwift-umbrella.h */,
+				0C8D533D96558AAFEE500DE041682216 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BertSwift";
+			sourceTree = "<group>";
+		};
+		994FACC57F1BCE964A6B18DFD5BFCE78 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE6919A4340858D05FBA6A6C532149 /* ReplaceMe.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A2F81F2CA61F2572008E9B95E6739F74 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C57CFFC16EBCDE3E10A5BEE6B51C448 /* BertSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F4AF35B6A8E598D0934EBFFB9391563E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4FFA069C77BEDE24E58AB0BE799539 /* BertSwift.framework */,
+				E48A82DFDDFB4E87439301FD0435C0FF /* Pods_BertSwift_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6C5023287FA9A31F98E7B2CC44AB2E91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C5305B1BF77413AA297DF05B2B6AE5 /* BertSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83097A5DCBBA51861D3536F7F28754D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29FE5EEFE4E4FA1D69ED023499622BB /* Pods-BertSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20F02E36F1B3CEAEDBC8A279EE0BA549 /* Pods-BertSwift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5543797EDE77957627D341BECCC8DC4C /* Build configuration list for PBXNativeTarget "Pods-BertSwift_Tests" */;
+			buildPhases = (
+				28A046B55C18B23467A93A1C73BBFCF5 /* Sources */,
+				FB69AC31AC836D141F31137D1BF5230B /* Frameworks */,
+				F83097A5DCBBA51861D3536F7F28754D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62F1209562375EE909B34ABA69471583 /* PBXTargetDependency */,
+			);
+			name = "Pods-BertSwift_Tests";
+			productName = "Pods-BertSwift_Tests";
+			productReference = E48A82DFDDFB4E87439301FD0435C0FF /* Pods_BertSwift_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB8374588D2B441590D87FA1E2D1BE0D /* BertSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B0D2282F91196554C5F8D81070E3BA /* Build configuration list for PBXNativeTarget "BertSwift" */;
+			buildPhases = (
+				A2FB586E76C065886A99225722422E1F /* Sources */,
+				BDF60BB7A17676DE15E3E202B64CA083 /* Frameworks */,
+				6C5023287FA9A31F98E7B2CC44AB2E91 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BertSwift;
+			productName = BertSwift;
+			productReference = DD4FFA069C77BEDE24E58AB0BE799539 /* BertSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F4AF35B6A8E598D0934EBFFB9391563E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB8374588D2B441590D87FA1E2D1BE0D /* BertSwift */,
+				20F02E36F1B3CEAEDBC8A279EE0BA549 /* Pods-BertSwift_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28A046B55C18B23467A93A1C73BBFCF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A3E491ABD2AE4A53AC018901DF2FB /* Pods-BertSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2FB586E76C065886A99225722422E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18FB4FB89A4D9EBCDE506C70E1D54EB /* BertSwift-dummy.m in Sources */,
+				48406D324ECB71B4AB03C47A5A9DD209 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62F1209562375EE909B34ABA69471583 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BertSwift;
+			target = CB8374588D2B441590D87FA1E2D1BE0D /* BertSwift */;
+			targetProxy = 7D8A13BABEC67653042046C2EBCB2EE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12D299B4906BDC91DE26D3157EB7446D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54C0951F3B1AD0BC4946F999315A694 /* BertSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BertSwift/BertSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BertSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BertSwift/BertSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BertSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B45CB04AB43139F15A338B4525E1918C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EDAF2F6D8F1AD44126674E18ADF388 /* Pods-BertSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BertSwift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BertSwift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C468446A947A2E51226375EB052FB20B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54C0951F3B1AD0BC4946F999315A694 /* BertSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BertSwift/BertSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BertSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BertSwift/BertSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BertSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D34E2FAB05E0BBC1FE7619E295874C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B11E7473B8D442617AEFCAF5F69D4FD9 /* Pods-BertSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BertSwift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BertSwift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35B0D2282F91196554C5F8D81070E3BA /* Build configuration list for PBXNativeTarget "BertSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12D299B4906BDC91DE26D3157EB7446D /* Debug */,
+				C468446A947A2E51226375EB052FB20B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5543797EDE77957627D341BECCC8DC4C /* Build configuration list for PBXNativeTarget "Pods-BertSwift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34E2FAB05E0BBC1FE7619E295874C5E /* Debug */,
+				B45CB04AB43139F15A338B4525E1918C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

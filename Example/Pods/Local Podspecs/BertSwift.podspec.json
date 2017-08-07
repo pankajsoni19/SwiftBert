@@ -1,0 +1,22 @@
+{
+  "name": "BertSwift",
+  "version": "0.1.0",
+  "summary": "A short description of BertSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pankajsoni@softwarejoint.com/BertSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pankajsoni@softwarejoint.com": "pankajsoni@softwarejoint.com"
+  },
+  "source": {
+    "git": "https://github.com/pankajsoni@softwarejoint.com/BertSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BertSwift/Classes/**/*"
+}
