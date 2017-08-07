@@ -9,8 +9,6 @@
 
 Erlang Bert serializer/deserializer library for Swift 3.0
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc/apps/erts/erl_ext_dist.html)
 
 ## Requirements
