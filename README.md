@@ -1,5 +1,3 @@
-![B](https://softwarejoint.com/static/img/ico/apple-touch-icon.png) image5
-
 # BertSwift
 <a href="https://developer.apple.com/swift/"><img src="/Res/swift.png" alt="" width="65" height="20" border="0" /></a>
 
@@ -12,6 +10,8 @@
 Erlang Bert serializer/deserializer library for Swift 3.0
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc/apps/erts/erl_ext_dist.html)
 
 ## Requirements
 
