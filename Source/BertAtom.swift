@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BertAtom: NSObject {
+public class BertAtom: NSObject {
     
     private let ATOM_EXT_MAX_LEN : Int = 255
     private var atom : String? = nil
     
-    required init(atom: String) {
+    required public init(atom: String) {
         if atom.isEmpty {
             print("ERROR: Atom can't be empty")
         }
@@ -25,7 +25,7 @@ class BertAtom: NSObject {
         }
     }
     
-    func stringVal() -> String {
+    public func stringVal() -> String {
         if let atom = atom, !atom.isEmpty{
             return atom
         }
@@ -33,7 +33,7 @@ class BertAtom: NSObject {
         return ""
     }
     
-    override var description: String{
+    override public var description: String{
         let atom = stringVal()
         return "BertAtom (\(atom))"
     }

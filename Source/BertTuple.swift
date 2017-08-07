@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BertTuple: NSMutableArray {
+public class BertTuple: NSMutableArray {
     
-    func isKV () -> Bool{
+    public func isKV () -> Bool{
         return (self.count == 2)
     }
 }

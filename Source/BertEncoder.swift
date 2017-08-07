@@ -9,7 +9,7 @@
 import UIKit
 import BigInt
 
-class BertEncoder: Bert {
+public class BertEncoder: Bert {
     
     private static let TAG = "BertEncoder"
     
@@ -21,39 +21,39 @@ class BertEncoder: Bert {
     private var encodeMapAsPropList     = false
     private var encodeKVTupleAsMap      = false
     
-    func withEncodeStringAsBinary(encodeStringAsBinary : Bool) -> BertEncoder {
+    public func withEncodeStringAsBinary(encodeStringAsBinary : Bool) -> BertEncoder {
         self.encodeStringAsBinary = encodeStringAsBinary
         return self
     }
     
-    func withEncodeMapAsPropList(encodeMapAsPropList  : Bool) -> BertEncoder {
+    public func withEncodeMapAsPropList(encodeMapAsPropList  : Bool) -> BertEncoder {
         self.encodeMapAsPropList = encodeMapAsPropList
         return self
     }
     
-    func withEncodeMapKeysAsAtom(encodeMapKeysAsAtom: Bool) ->BertEncoder {
+    public func withEncodeMapKeysAsAtom(encodeMapKeysAsAtom: Bool) ->BertEncoder {
         self.encodeMapKeysAsAtom = encodeMapKeysAsAtom
         return self
     }
     
-    func withEncodeMapKeysAsString(encodeMapKeysAsString : Bool) -> BertEncoder {
+    public func withEncodeMapKeysAsString(encodeMapKeysAsString : Bool) -> BertEncoder {
         self.encodeMapKeysAsString = encodeMapKeysAsString
         return self
     }
     
-    func withEncodeKVTupleAsMap(encodeKVTupleAsMap: Bool) -> BertEncoder {
+    public func withEncodeKVTupleAsMap(encodeKVTupleAsMap: Bool) -> BertEncoder {
         self.encodeKVTupleAsMap = encodeKVTupleAsMap
         return self
     }
     
-    func encodeAny(any: Any!) -> Data{
+    public func encodeAny(any: Any!) -> Data{
         data = Data()
         data.append(&MAGIC, count: 1)
         encode(any: any)
         return data
     }
     
-    func reset() {
+    public func reset() {
         data = nil
     }
     
@@ -263,7 +263,7 @@ class BertEncoder: Bert {
         data.append(UnsafeBufferPointer(start: &int, count: 1))
     }
     
-    func toByteArray<T>(value: T) -> [UInt8] {
+    public func toByteArray<T>(value: T) -> [UInt8] {
         var v: T = value
         return withUnsafePointer(to: &v) {
             Array(UnsafeBufferPointer(start: UnsafeRawPointer($0).assumingMemoryBound(to: UInt8.self), count: MemoryLayout<T>.size).reversed())

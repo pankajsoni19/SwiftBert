@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DistributionHeader: NSObject {
+public class DistributionHeader {
     
     var MAGIC                       :UInt8      = 131
     var NIL_EXT                     :UInt8      = 106

@@ -9,7 +9,7 @@
 import UIKit
 import BigInt
 
-class BertDecoder: Bert {
+public class BertDecoder: Bert {
     
     private var decodeAtomAsString      = false
     private var decodePropListsAsMap    = false
@@ -18,22 +18,22 @@ class BertDecoder: Bert {
     private var keys: NSMutableArray!
     private var ptr: UnsafePointer<UInt8>!
     
-    func withDecodeAtomAsString(decodeAtomAsString : Bool) -> BertDecoder {
+    public func withDecodeAtomAsString(decodeAtomAsString : Bool) -> BertDecoder {
         self.decodeAtomAsString = decodeAtomAsString
         return self
     }
     
-    func withDecodePropListsAsMap(decodePropListsAsMap : Bool)-> BertDecoder {
+    public func withDecodePropListsAsMap(decodePropListsAsMap : Bool)-> BertDecoder {
         self.decodePropListsAsMap = decodePropListsAsMap
         return self
     }
     
-    func withDecodeMapKeysAsString(decodeMapKeysAsString : Bool) -> BertDecoder {
+    public func withDecodeMapKeysAsString(decodeMapKeysAsString : Bool) -> BertDecoder {
         self.decodeMapKeysAsString = decodeMapKeysAsString
         return self
     }
     
-    func withDecodeBinaryAsStringForKey(key: NSObject) -> BertDecoder {
+    public func withDecodeBinaryAsStringForKey(key: NSObject) -> BertDecoder {
         if (keys == nil){
             keys = NSMutableArray()
         }
@@ -41,15 +41,14 @@ class BertDecoder: Bert {
         return self
     }
     
-    func shouldDecodeBinaryAsStringForKey(key: NSObject) -> Bool {
+    public func shouldDecodeBinaryAsStringForKey(key: NSObject) -> Bool {
         if (keys == nil) {
             return false
         }
         return (keys.index(of: key) != NSNotFound)
     }
     
-    func decodeAny(data: Data) -> Any?
-    {
+    public func decodeAny(data: Data) -> Any? {
         if data.count == 0 {
             return nil
         }
@@ -137,7 +136,7 @@ class BertDecoder: Bert {
         return result
     }
     
-    func decodeDouble() -> Double {
+    private func decodeDouble() -> Double {
         let array = Array(UnsafeBufferPointer(start: ptr, count: MemoryLayout<Double>.size).reversed())
         advancePtrBy(n: MemoryLayout<Double>.size)
         return array.withUnsafeBufferPointer { (ptr) -> Double! in
@@ -149,7 +148,7 @@ class BertDecoder: Bert {
     }
 
     
-    func decodeLongOrBigInteger(tag: UInt8) -> Any? {
+    private func decodeLongOrBigInteger(tag: UInt8) -> Any? {
         var byteCount: NSNumber!
         
         switch tag {
@@ -169,7 +168,7 @@ class BertDecoder: Bert {
         return NSNumber(value: (bigInt.description as NSString).longLongValue)
     }
     
-    func decodeAtom(tag: UInt8) -> Any? {
+    private func decodeAtom(tag: UInt8) -> Any? {
         var byteCount: NSNumber!
         
         switch tag {

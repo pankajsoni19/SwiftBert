@@ -8,7 +8,9 @@
 
 import UIKit
 
-class Bert: DistributionHeader {
+public class Bert: DistributionHeader {
+    
+    public override init() { }
     
     func isFraction(num: NSNumber) -> Bool {
         let dValue = num.doubleValue
