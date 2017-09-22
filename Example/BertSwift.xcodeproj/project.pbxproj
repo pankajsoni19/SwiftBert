@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BCED27F59A3B408A354C320E /* Pods_BertSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BF9F2CB93F91C3D231DCF6 /* Pods_BertSwift_Tests.framework */; };
-		D4118F701F38FE4200066558 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = D4118F681F38FE4200066558 /* swift.png */; };
 		D4118F711F38FE4200066558 /* Bert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6A1F38FE4200066558 /* Bert.swift */; };
 		D4118F721F38FE4200066558 /* BertAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6B1F38FE4200066558 /* BertAtom.swift */; };
 		D4118F731F38FE4200066558 /* BertDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6C1F38FE4200066558 /* BertDecoder.swift */; };
@@ -28,7 +27,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		819001E0F69A1E1B2B357736 /* BertSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BertSwift.podspec; path = ../BertSwift.podspec; sourceTree = "<group>"; };
 		B8F88DBCB8A68BE73F23C403 /* Pods-BertSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4118F681F38FE4200066558 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		D4118F6A1F38FE4200066558 /* Bert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bert.swift; sourceTree = "<group>"; };
 		D4118F6B1F38FE4200066558 /* BertAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertAtom.swift; sourceTree = "<group>"; };
 		D4118F6C1F38FE4200066558 /* BertDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertDecoder.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				D4118F671F38FE4200066558 /* Res */,
 				D4118F691F38FE4200066558 /* Source */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -104,15 +101,6 @@
 				5F72966907213C88A5070746 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		D4118F671F38FE4200066558 /* Res */ = {
-			isa = PBXGroup;
-			children = (
-				D4118F681F38FE4200066558 /* swift.png */,
-			);
-			name = Res;
-			path = ../Res;
 			sourceTree = "<group>";
 		};
 		D4118F691F38FE4200066558 /* Source */ = {
@@ -201,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4118F701F38FE4200066558 /* swift.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

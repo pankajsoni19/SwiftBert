@@ -1,6 +1,0 @@
-framework module BertSwift {
-  umbrella header "BertSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
