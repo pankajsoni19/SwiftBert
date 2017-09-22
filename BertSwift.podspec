@@ -6,26 +6,30 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 
-Pod::Spec.new do |s|
-s.name             = 'BertSwift'
-s.version          = '2.1.0'
-s.summary          = 'Swift 4.0 compatible Erlang binary format serializer, deserilizer'
+Pod::Spec.new do |spec|
+spec.name             = 'BertSwift'
+spec.version          = '2.1.0'
+spec.summary          = 'Swift 4.0 compatible Erlang binary format serializer, deserilizer'
 
-s.description      = <<-DESC
+spec.description      = <<-DESC
 This is Erlang BERT format serializer, deserializer for sending & receiving native erlang packets
 DESC
 
-s.homepage         = 'https://github.com/softwarejoint/BertSwift'
-s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'pankajsoni@softwarejoint.com' => 'pankajsoni@softwarejoint.com' }
-s.source           = { :git => 'https://github.com/softwarejoint/BertSwift.git', :tag => s.version.to_s }
+spec.homepage         = 'https://github.com/softwarejoint/BertSwift'
+spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+spec.author           = { 'pankajsoni@softwarejoint.com' => 'pankajsoni@softwarejoint.com' }
+spec.source           = { :git => 'https://github.com/softwarejoint/BertSwift.git', :tag => String(spec.version) }
 
-s.ios.deployment_target = '9.0'
+spec.ios.deployment_target = '8.0'
+spec.osx.deployment_target = "10.9"
+spec.tvos.deployment_target = "9.0"
+spec.watchos.deployment_target = "2.0"
 
-s.source_files     = "Source/*.swift"
+spec.source_files     = "Source/*.swift"
 
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
-s.requires_arc = true
+spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+spec.requires_arc = true
 
-s.dependency 'BigInt', '3.0.0'
+spec.dependency 'BigInt', '~> 3.0'
+
 end
