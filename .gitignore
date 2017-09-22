@@ -31,3 +31,11 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+
+/Carthage/Build
+/.build
+/Packages
+xcuserdata
+/Package.pins
+/Package.resolved
+Pods/

@@ -3,12 +3,10 @@
 //  wafer
 //
 //  Created by Pankaj Soni on 06/10/16.
-//  Copyright © 2016 pankaj soni. All rights reserved.
+//  Copyright © 2017 pankaj soni. All rights reserved.
 //
 
-import UIKit
-
-public class BertAtom: NSObject {
+public class BertAtom {
     
     private let ATOM_EXT_MAX_LEN : Int = 255
     private var atom : String? = nil
@@ -33,7 +31,7 @@ public class BertAtom: NSObject {
         return ""
     }
     
-    override public var description: String{
+    public var description: String {
         let atom = stringVal()
         return "BertAtom (\(atom))"
     }

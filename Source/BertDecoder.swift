@@ -3,11 +3,11 @@
 //  wafer
 //
 //  Created by Pankaj Soni on 06/10/16.
-//  Copyright © 2016 pankaj soni. All rights reserved.
+//  Copyright © 2017 pankaj soni. All rights reserved.
 //
 
-import UIKit
 import BigInt
+import BigInt.Swift
 
 public class BertDecoder: Bert {
     
@@ -160,11 +160,12 @@ public class BertDecoder: Bert {
             return nil
         }
         
-        let isNegative: Bool = decodeByte() == 1
+        let sign = decodeByte() == 1 ? BigInt.Sign.minus : BigInt.Sign.plus
+        
         let array = Array(UnsafeBufferPointer<UInt8>(start: ptr, count: byteCount.intValue).reversed())
         let bytes = Data(bytes: UnsafeRawPointer(array), count: byteCount.intValue)
         advancePtrBy(n: byteCount.intValue)
-        let bigInt = BigInt(abs: BigUInt(bytes), negative: isNegative)
+        let bigInt = BigInt(sign: sign, magnitude: BigUInt(bytes))
         return NSNumber(value: (bigInt.description as NSString).longLongValue)
     }
     

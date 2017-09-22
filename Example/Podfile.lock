@@ -1,6 +1,6 @@
 PODS:
   - BertSwift (2.1.0):
-    - BigInt (= 3.0.0)
+    - BigInt (~> 3.0)
   - BigInt (3.0.0):
     - SipHash (~> 1.2)
   - SipHash (1.2.0)
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BertSwift: e3a21fe6e5a6a1c825da9d4d99a5efe0097ca494
+  BertSwift: 2883f6b77b9bc9828d7abd7f4784b5584d21b40a
   BigInt: a7864bcecd2976bced91963baef90079dbdcca25
   SipHash: c6e9e43e9c531b5bc6602545130c26194a6d31ce
 

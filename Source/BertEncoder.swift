@@ -3,10 +3,9 @@
 //  wafer
 //
 //  Created by Pankaj Soni on 06/10/16.
-//  Copyright © 2016 pankaj soni. All rights reserved.
+//  Copyright © 2017 pankaj soni. All rights reserved.
 //
 
-import UIKit
 import BigInt
 
 public class BertEncoder: Bert {
@@ -126,7 +125,7 @@ public class BertEncoder: Bert {
     
     private func encodeBigInteger(bigInt: BigInt){
         
-        let bytes = bigInt.abs.serialize()
+        let bytes = bigInt.magnitude.serialize()
         let count = bytes.count
         
         if (count <= SMALL_INTEGER_EXT_MAX_VAL){
@@ -137,7 +136,7 @@ public class BertEncoder: Bert {
             putUnsignedInt(someInt: count);
         }
         
-        var sign: UInt8 = bigInt.negative ? 1 : 0
+        var sign: UInt8 = bigInt.sign == BigInt.Sign.minus ? 1 : 0
         
         data.append(&sign, count: 1)
         data.append(bytes)
