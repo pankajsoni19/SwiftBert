@@ -1,9 +1,11 @@
 # BertSwift
 
 [![Swift 4](https://img.shields.io/badge/Swift-4-blue.svg)](https://developer.apple.com/swift/)
-[![License](https://img.shields.io/cocoapods/l/BertSwift-green.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
+[![License](https://img.shields.io/badge/licence-MIT-green.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
 [![Platform](https://img.shields.io/cocoapods/p/BertSwift.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
 [![Version](https://img.shields.io/cocoapods/v/BertSwift.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
+
+[![License](https://img.shields.io/badge/licence-MIT-blue.svg)](http://cocoapods.org/pods/BigInt)
 
 ## About
 

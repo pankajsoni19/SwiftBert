@@ -15,13 +15,13 @@
 		D4118F741F38FE4200066558 /* BertEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6D1F38FE4200066558 /* BertEncoder.swift */; };
 		D4118F751F38FE4200066558 /* BertTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6E1F38FE4200066558 /* BertTuple.swift */; };
 		D4118F761F38FE4200066558 /* DistributionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4118F6F1F38FE4200066558 /* DistributionHeader.swift */; };
+		D41D53CF1F74FF220018BD05 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = D41D53CE1F74FF220018BD05 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B726ED91A1CDE17A07A9A39 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		40BF9F2CB93F91C3D231DCF6 /* Pods_BertSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BertSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1AFCF47C97442EC458FA59 /* Pods-BertSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5F72966907213C88A5070746 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* BertSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BertSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -33,6 +33,7 @@
 		D4118F6D1F38FE4200066558 /* BertEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertEncoder.swift; sourceTree = "<group>"; };
 		D4118F6E1F38FE4200066558 /* BertTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertTuple.swift; sourceTree = "<group>"; };
 		D4118F6F1F38FE4200066558 /* DistributionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionHeader.swift; sourceTree = "<group>"; };
+		D41D53CE1F74FF220018BD05 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +97,9 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				D41D53CE1F74FF220018BD05 /* LICENSE.md */,
 				819001E0F69A1E1B2B357736 /* BertSwift.podspec */,
 				1B726ED91A1CDE17A07A9A39 /* README.md */,
-				5F72966907213C88A5070746 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -189,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41D53CF1F74FF220018BD05 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
