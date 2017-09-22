@@ -16,7 +16,7 @@ This is Erlang BERT format serializer, deserializer for sending & receiving nati
 DESC
 
 spec.homepage         = 'https://github.com/softwarejoint/BertSwift'
-spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+spec.license          = { :type => 'MIT', :file => 'LICENSE.md' }
 spec.author           = { 'pankajsoni@softwarejoint.com' => 'pankajsoni@softwarejoint.com' }
 spec.source           = { :git => 'https://github.com/softwarejoint/BertSwift.git', :tag => String(spec.version) }
 
