@@ -11,6 +11,11 @@ Erlang Bert serializer/deserializer library for Swift 4.0
 
 You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc/apps/erts/erl_ext_dist.html)
 
+## Other Languages
+
+* [JavaScript](https://github.com/softwarejoint/BERT-JS)
+* [Android](https://github.com/softwarejoint/BertAndroid)
+
 ## Requirements
 
 * Swift 4.0
