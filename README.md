@@ -30,6 +30,7 @@ pod "BertSwift"
 
 ## Change Log
 
+* 2.1.1 - Updating BigInt dependency
 * 2.1.0 - Support for Swift 4.0
 
 ## Author
