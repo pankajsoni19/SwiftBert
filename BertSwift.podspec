@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
 spec.name             = 'BertSwift'
-spec.version          = '2.1.0'
+spec.version          = '2.1.1'
 spec.summary          = 'Swift 4.0 compatible Erlang binary format serializer, deserilizer'
 
 spec.description      = <<-DESC
