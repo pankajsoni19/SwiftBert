@@ -30,6 +30,6 @@ spec.source_files     = "Source/*.swift"
 spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 spec.requires_arc = true
 
-spec.dependency 'BigInt', '~> 3.0'
+spec.dependency 'BigInt', '3.0.1'
 
 end
