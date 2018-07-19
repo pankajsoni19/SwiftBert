@@ -9,16 +9,16 @@
 Pod::Spec.new do |spec|
 spec.name             = 'BertSwift'
 spec.version          = '2.1.2'
-spec.summary          = 'Swift 4.0 compatible Erlang binary format serializer, deserilizer'
+spec.summary          = 'Swift 4.1 compatible Erlang binary format serializer, deserilizer'
 
 spec.description      = <<-DESC
 This is Erlang BERT format serializer, deserializer for sending & receiving native erlang packets
 DESC
 
-spec.homepage         = 'https://github.com/softwarejoint/BertSwift'
+spec.homepage         = 'https://github.com/softwarejoint/SwiftBert'
 spec.license          = { :type => 'MIT', :file => 'LICENSE.md' }
 spec.author           = { 'pankajsoni@softwarejoint.com' => 'pankajsoni@softwarejoint.com' }
-spec.source           = { :git => 'https://github.com/softwarejoint/BertSwift.git', :tag => String(spec.version) }
+spec.source           = { :git => 'https://github.com/softwarejoint/SwiftBert.git', :tag => String(spec.version) }
 
 spec.ios.deployment_target = '8.0'
 spec.osx.deployment_target = "10.9"
