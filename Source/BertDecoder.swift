@@ -139,7 +139,7 @@ public class BertDecoder: Bert {
     private func decodeDouble() -> Double {
         let array = Array(UnsafeBufferPointer(start: ptr, count: MemoryLayout<Double>.size).reversed())
         advancePtrBy(n: MemoryLayout<Double>.size)
-        return array.withUnsafeBufferPointer { (ptr) -> Double! in
+        return array.withUnsafeBufferPointer { (ptr) -> Double in
             let baseAddr = ptr.baseAddress!
             return baseAddr.withMemoryRebound(to: Double.self, capacity: 1, { (ptr) -> Double in
                 return ptr.pointee

@@ -143,7 +143,7 @@ public class BertEncoder: Bert {
     }
     
     private func encodeAtom(atom: String) {
-        let count = atom.characters.count;
+        let count = atom.count;
         
         if (count <= SMALL_INTEGER_EXT_MAX_VAL){
             data.append(&SMALL_ATOM_EXT, count: 1)
@@ -162,14 +162,14 @@ public class BertEncoder: Bert {
             return;
         }
         
-        let count = string.characters.count;
+        let count = string.count;
         
         if (count <= STRING_EXT_MAX_VAL){
             data.append(&STRING_EXT, count: 1)
             putUnsignedShort(someShort: count);
             data.append(string.data(using: String.Encoding.utf8)!)
         } else {
-            encodeArray(array: Array(arrayLiteral: string.characters))
+            encodeArray(array: Array(arrayLiteral: string))
         }
     }
     

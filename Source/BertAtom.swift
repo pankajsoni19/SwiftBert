@@ -15,7 +15,7 @@ public class BertAtom {
         if atom.isEmpty {
             print("ERROR: Atom can't be empty")
         }
-        else if atom.characters.count > ATOM_EXT_MAX_LEN {
+        else if atom.count > ATOM_EXT_MAX_LEN {
             print("ERROR: Atom max length can be only \(ATOM_EXT_MAX_LEN)")
         }
         else {

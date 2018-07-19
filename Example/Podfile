@@ -1,4 +1,7 @@
+platform :ios, '8.0'
 use_frameworks!
+inhibit_all_warnings!
+
 target 'BertSwift_Tests' do
   pod 'BertSwift', :path => '../'
 end

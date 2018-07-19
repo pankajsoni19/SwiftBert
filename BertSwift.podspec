@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
 spec.name             = 'BertSwift'
-spec.version          = '2.1.1'
+spec.version          = '2.1.2'
 spec.summary          = 'Swift 4.0 compatible Erlang binary format serializer, deserilizer'
 
 spec.description      = <<-DESC
@@ -30,6 +30,6 @@ spec.source_files     = "Source/*.swift"
 spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 spec.requires_arc = true
 
-spec.dependency 'BigInt', '3.0.1'
+spec.dependency 'BigInt', '3.1.0'
 
 end
