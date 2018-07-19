@@ -7,7 +7,7 @@
 
 ## About
 
-Erlang Bert serializer/deserializer library for Swift 4.0
+Erlang Bert serializer/deserializer library for Swift 4.1
 
 You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc/apps/erts/erl_ext_dist.html)
 
@@ -31,6 +31,7 @@ pod "BertSwift"
 
 ## Change Log
 
+* 2.1.2 - Support for Swift 4.1
 * 2.1.1 - Updating BigInt dependency
 * 2.1.0 - Support for Swift 4.0
 

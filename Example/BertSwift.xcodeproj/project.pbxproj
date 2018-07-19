@@ -25,7 +25,7 @@
 		607FACE51AFB9204008FA782 /* BertSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BertSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		819001E0F69A1E1B2B357736 /* BertSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BertSwift.podspec; path = ../BertSwift.podspec; sourceTree = "<group>"; };
+		819001E0F69A1E1B2B357736 /* BertSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BertSwift.podspec; path = ../BertSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B8F88DBCB8A68BE73F23C403 /* Pods-BertSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BertSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BertSwift_Tests/Pods-BertSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4118F6A1F38FE4200066558 /* Bert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bert.swift; sourceTree = "<group>"; };
 		D4118F6B1F38FE4200066558 /* BertAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BertAtom.swift; sourceTree = "<group>"; };
