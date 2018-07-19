@@ -13,8 +13,9 @@ You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc
 
 ## Other Languages
 
-* [JavaScript](https://github.com/softwarejoint/BERT-JS)
-* [Android](https://github.com/softwarejoint/BertAndroid)
+* [Swift](https://github.com/softwarejoint/SwiftBert)
+* [Android](https://github.com/softwarejoint/AndroidBert)
+* [JavaScript](https://github.com/softwarejoint/JavaScriptBert)
 
 ## Requirements
 
