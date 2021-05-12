@@ -1,13 +1,12 @@
 //
 //  BertDecoder.swift
-//  wafer
 //
 //  Created by Pankaj Soni on 06/10/16.
-//  Copyright © 2017 pankaj soni. All rights reserved.
+//  Copyright © 2017-2021 pankaj soni. All rights reserved.
 //
 
 import BigInt
-import BigInt.Swift
+import Foundation
 
 public class BertDecoder: Bert {
     
@@ -52,9 +51,10 @@ public class BertDecoder: Bert {
         if data.count == 0 {
             return nil
         }
-                
-        data.withUnsafeBytes { (u8Ptr: UnsafePointer<UInt8>) in
-            ptr = u8Ptr
+        
+    
+        data.withUnsafeBytes { (rawptr: UnsafeRawBufferPointer) in
+            ptr = rawptr.bindMemory(to: UInt8.self).baseAddress!
         }
                 
         if (ptr.pointee == MAGIC){
@@ -163,7 +163,7 @@ public class BertDecoder: Bert {
         let sign = decodeByte() == 1 ? BigInt.Sign.minus : BigInt.Sign.plus
         
         let array = Array(UnsafeBufferPointer<UInt8>(start: ptr, count: byteCount.intValue).reversed())
-        let bytes = Data(bytes: UnsafeRawPointer(array), count: byteCount.intValue)
+        let bytes = Data(bytes: array, count: byteCount.intValue)
         advancePtrBy(n: byteCount.intValue)
         let bigInt = BigInt(sign: sign, magnitude: BigUInt(bytes))
         return NSNumber(value: (bigInt.description as NSString).longLongValue)

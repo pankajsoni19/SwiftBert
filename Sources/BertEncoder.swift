@@ -1,12 +1,12 @@
 //
 //  BertEncoder.swift
-//  wafer
 //
 //  Created by Pankaj Soni on 06/10/16.
-//  Copyright © 2017 pankaj soni. All rights reserved.
+//  Copyright © 2017-2021 pankaj soni. All rights reserved.
 //
 
 import BigInt
+import Foundation
 
 public class BertEncoder: Bert {
     
@@ -110,8 +110,7 @@ public class BertEncoder: Bert {
             encodeByte(someByte: someInt)
         } else if (INTEGER_EXT_MIN_VAL <= someInt && someInt <= INTEGER_EXT_MAX_VAL) {
             data.append(&INTEGER_EXT, count: 1)
-            var value: Int32 = Int32(someInt).bigEndian;
-            data.append(UnsafeBufferPointer(start: &value, count: 1))
+            data.append(value: Int32(someInt).bigEndian)
         } else {
             encodeBigInteger(bigInt: BigInt(someInt))
         }
@@ -248,18 +247,15 @@ public class BertEncoder: Bert {
     }
     
     private func putUnsignedByte(someByte: Int) {
-        var byte: UInt8 = UInt8(someByte);
-        data.append(&byte, count: 1)
+        data.append(value: UInt8(someByte))
     }
     
     private func putUnsignedShort(someShort: Int) {
-        var short: UInt16 = UInt16(someShort).bigEndian
-        data.append(UnsafeBufferPointer(start: &short, count: 1))
+        data.append(value: UInt16(someShort).bigEndian)
     }
     
     private func putUnsignedInt(someInt: Int) {
-        var int: UInt32 = UInt32(someInt).bigEndian
-        data.append(UnsafeBufferPointer(start: &int, count: 1))
+        data.append(value: UInt32(someInt).bigEndian)
     }
     
     public func toByteArray<T>(value: T) -> [UInt8] {

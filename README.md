@@ -1,13 +1,13 @@
 # BertSwift
 
-[![Swift 4](https://img.shields.io/badge/Swift-4-green.svg)](https://developer.apple.com/swift/)
+[![Swift 5.4](https://img.shields.io/badge/Swift-4-green.svg)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/badge/licence-MIT-green.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
 [![Platform](https://img.shields.io/cocoapods/p/BertSwift.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
 [![Version](https://img.shields.io/cocoapods/v/BertSwift.svg?style=flat)](http://cocoapods.org/pods/BertSwift)
 
 ## About
 
-Erlang Bert serializer/deserializer library for Swift 4.1
+Erlang Bert serializer/deserializer library for Swift 5.4
 
 You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc/apps/erts/erl_ext_dist.html)
 
@@ -17,27 +17,25 @@ You can read more about the BERT encoding at [Erlang Bert](http://erlang.org/doc
 * [Android](https://github.com/softwarejoint/AndroidBert)
 * [JavaScript](https://github.com/softwarejoint/JavaScriptBert)
 
-## Requirements
-
-* Swift 4.0
-
 ## Installation
 
-BertSwift is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
+BertSwift is available through Swift Package Manager.
 
-```ruby
-pod "BertSwift"
+
+```
+.package(url: "https://github.com/pankajsoni19/SwiftBert.git", from: "2.2.0")
 ```
 
 ## Change Log
 
+* 2.3.0 - Support Swift 5.4
 * 2.1.2 - Support for Swift 4.1
 * 2.1.1 - Updating BigInt dependency
 * 2.1.0 - Support for Swift 4.0
 
 ## Author
 
-Pankaj Soni <pankajsoni@softwarejoint.com>
+Pankaj Soni <pankajsoni19@live.com>
 
 ## License
 
