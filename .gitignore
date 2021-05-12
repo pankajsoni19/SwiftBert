@@ -1,4 +1,5 @@
 # OS X
+.swiftpm/
 .DS_Store
 
 # Xcode
